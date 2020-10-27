@@ -8,6 +8,18 @@ defmodule DistributedLogging.Application do
   @impl true
   def start(_type, _args) do
     children = [
+      Plug.Adapters.Cowboy.child_spec(scheme: :http,
+        plug: DistributedLogging.Router,
+        options: [port: 8001]),
+      Plug.Adapters.Cowboy.child_spec(scheme: :http,
+        plug: DistributedLogging.Node1,
+        options: [port: 5000]),
+      Plug.Adapters.Cowboy.child_spec(scheme: :http,
+        plug: DistributedLogging.Node2,
+        options: [port: 5001]),
+      Plug.Adapters.Cowboy.child_spec(scheme: :http,
+        plug: DistributedLogging.Node3,
+        options: [port: 5002])
       # Starts a worker by calling: DistributedLogging.Worker.start_link(arg)
       # {DistributedLogging.Worker, arg}
     ]
