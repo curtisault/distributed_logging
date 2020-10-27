@@ -9,7 +9,8 @@ defmodule DistributedLogging.Node1 do
 
 
   get "/status" do
-    send_resp(conn, 200, "Working from Port 5000.")
+    port = :cowboy_req.port(conn)
+    send_resp(conn, 200, "Working from Port #{port}.")
   end
 
   match _ do

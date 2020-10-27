@@ -13,13 +13,13 @@ defmodule DistributedLogging.Application do
         options: [port: 8001]),
       Plug.Adapters.Cowboy.child_spec(scheme: :http,
         plug: DistributedLogging.Node1,
-        options: [port: 5000]),
+        options: [port: 5555]),
       Plug.Adapters.Cowboy.child_spec(scheme: :http,
         plug: DistributedLogging.Node2,
-        options: [port: 5001]),
+        options: [port: 5556]),
       Plug.Adapters.Cowboy.child_spec(scheme: :http,
         plug: DistributedLogging.Node3,
-        options: [port: 5002])
+        options: [port: 5557])
       # Starts a worker by calling: DistributedLogging.Worker.start_link(arg)
       # {DistributedLogging.Worker, arg}
     ]
