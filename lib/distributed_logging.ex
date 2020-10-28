@@ -8,15 +8,10 @@ defmodule DistributedLogging do
 
   @doc """
   Hello world.
+
+  Leaving to guarantee a passing test example.
   """
   def hello do
     :world
-  end
-
-  @doc """
-  Create directories if they don't exist.
-  """
-  def create_dir do
-
   end
 end

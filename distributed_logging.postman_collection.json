@@ -1,0 +1,345 @@
+{
+	"info": {
+		"_postman_id": "113982ce-cb21-4d9b-8cc0-6262e33c7b2b",
+		"name": "distributed_logging",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Node 1",
+			"item": [
+				{
+					"name": "Node 1 Status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5555/status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5555",
+							"path": [
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Node 1 Log Event 1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "This is event 1"
+						},
+						"url": {
+							"raw": "http://localhost:5555/event",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5555",
+							"path": [
+								"event"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Node 1 Log Event 2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "This is event 2"
+						},
+						"url": {
+							"raw": "http://localhost:5555/event",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5555",
+							"path": [
+								"event"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Node 1 Log Event 3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "This is event 3"
+						},
+						"url": {
+							"raw": "http://localhost:5555/event",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5555",
+							"path": [
+								"event"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Node 1 Read Log",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5555/log",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5555",
+							"path": [
+								"log"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Node 2",
+			"item": [
+				{
+					"name": "Node 2 Status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5556/status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5556",
+							"path": [
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Node 2 Log Event 1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "This is event 1"
+						},
+						"url": {
+							"raw": "http://localhost:5556/event",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5556",
+							"path": [
+								"event"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Node 2 Log Event 2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "This is event 2"
+						},
+						"url": {
+							"raw": "http://localhost:5556/event",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5556",
+							"path": [
+								"event"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Node 2 Log Event 3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "This is event 3"
+						},
+						"url": {
+							"raw": "http://localhost:5556/event",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5556",
+							"path": [
+								"event"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Node 2 Read Log",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5556/log",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5556",
+							"path": [
+								"log"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Node 3",
+			"item": [
+				{
+					"name": "Node 3 Status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5557/status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5557",
+							"path": [
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Node 3 Log Event 1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "This is event 1"
+						},
+						"url": {
+							"raw": "http://localhost:5557/event",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5557",
+							"path": [
+								"event"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Node 3 Log Event 2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "This is event 2"
+						},
+						"url": {
+							"raw": "http://localhost:5557/event",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5557",
+							"path": [
+								"event"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Node 3 Log Event 3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "This is event 3"
+						},
+						"url": {
+							"raw": "http://localhost:5557/event",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5557",
+							"path": [
+								"event"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Node 3 Read Log",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5557/log",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5557",
+							"path": [
+								"log"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
