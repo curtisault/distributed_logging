@@ -47,9 +47,13 @@ The application uses 4 total ports:
 
 More can be added with ease by having additional children processes in the `DistributedLogging.Application` module. Each child process implements it's own Module which allows for different business logic to be executed on different ports. In the case of this project, the only difference between Node modules is which node to log to.
 
+Each Node Module also contains a catch all fail in case you make a request to an endpoint that doesn't exist.
+
 # Tests
 
-All the tests ensure that each endpoint in all Node modules work and that each public function in `DistributedLogging.Log` are working as intended.
+All the unit tests ensure that each endpoint in all Node modules work and that each public function in `DistributedLogging.Log` are working as intended.
+
+To run integration tests, change `run.sh` & `test.sh` to be executable. Run `run.sh` first. When it's finished retrieving dependencies and compiling, run `test.sh` in a separate terminal session.
 
 # Tools
 Mostly command line but I threw in a Postman collection in addition to the tests that get ran.
