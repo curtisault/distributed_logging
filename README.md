@@ -13,23 +13,23 @@ I decided to use cowboy as my HTTP Server and Plug to create the endpoints as th
 
 # Architecture
 
-.<br />
-├── ./README.md<br />
-├── ./lib<br />
-│   ├── ./lib/distributed_logging<br />
-│   │   └── ./lib/distributed_logging/application.ex<br />
-│   ├── ./lib/distributed_logging.ex<br />
-│   ├── ./lib/log.ex<br />
-│   └── ./lib/routers<br />
-│       ├── ./lib/routers/node1.ex<br />
-│       ├── ./lib/routers/node2.ex<br />
-│       ├── ./lib/routers/node3.ex<br />
-│       └── ./lib/routers/router.ex<br />
-├── ./mix.exs<br />
-├── ./mix.lock<br />
-└── ./test<br />
-    ├── ./test/distributed_logging_test.exs<br />
-    └── ./test/test_helper.exs<br />
+    .
+    ├── ./README.md
+    ├── ./lib
+    │   ├── ./lib/distributed_logging
+    │   │   └── ./lib/distributed_logging/application.ex
+    │   ├── ./lib/distributed_logging.ex
+    │   ├── ./lib/log.ex
+    │   └── ./lib/routers
+    │       ├── ./lib/routers/node1.ex
+    │       ├── ./lib/routers/node2.ex
+    │       ├── ./lib/routers/node3.ex
+    │       └── ./lib/routers/router.ex
+    ├── ./mix.exs
+    ├── ./mix.lock
+    └── ./test
+        ├── ./test/distributed_logging_test.exs
+        └── ./test/test_helper.exs
 
 
 Application wide logic is placed in the `lib/distributed_logging/application.ex` file or more aptly known as the Application Module that is ran at startup.
@@ -53,7 +53,7 @@ Each Node Module also contains a catch all fail in case you make a request to an
 
 All the unit tests ensure that each endpoint in all Node modules work and that each public function in `DistributedLogging.Log` are working as intended.
 
-To run integration tests, change `run.sh` & `test.sh` to be executable. Run `run.sh` first. When it's finished retrieving dependencies and compiling, run `test.sh` in a separate terminal session.
+To run integration tests, set `run.sh`
 
 # Tools
 Mostly command line but I threw in a Postman collection in addition to the tests that get ran.
